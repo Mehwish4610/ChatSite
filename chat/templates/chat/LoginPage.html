@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f0f8ff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      background-color: #007bff;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .login-container {
+      width: 40%;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-container form {
+      width: 100%;
+    }
+
+    .login-container form input,
+    .login-container form button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .login-container form button {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+
+    .login-container form button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to My Chat Site</h1>
+  </header>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 ChatApp. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
